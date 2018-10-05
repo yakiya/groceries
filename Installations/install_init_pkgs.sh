@@ -12,7 +12,8 @@ echo ""
 
 echo -e "===== Install requires PKGs ====\n"
 sleep 1
-sudo yum install -y wget git vim lrzsz net-tools bind-utils
-
+sudo yum install -y wget git vim \
+                    lrzsz net-tools bind-utils \
+                    htop dstat mtr \
 
 echo -e "========== Finished ==========\n"
