@@ -1,0 +1,25 @@
+{
+    "CN": "kubernetes",
+    "hosts": [
+      "127.0.0.1",
+      "10.180.50.90",
+      "kubernetes",
+      "kubernetes.default",
+      "kubernetes.default.svc",
+      "kubernetes.default.svc.cluster",
+      "kubernetes.default.svc.cluster.local"
+    ],
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "C": "PH",
+            "L": "Makati",
+            "ST": "Makati",
+            "O": "k8s",
+            "OU": "System"
+        }
+    ]
+}
