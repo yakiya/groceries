@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta, date
 today = date.today()
-receive = "xavi.m@iv66.net"
+receive = "xavi.m@"
 class Mail():
     def Send(self, _to, _cc,_bcc, _from, _subject, content,_file):
         msg = MIMEMultipart()
@@ -60,7 +60,7 @@ else:
     certwarn= "<br />".join(certwarn.split("\n"))
     mail = Mail()
     file = ''
-    subject = '瘋狂奪寶_域名证书到期通知'
+    subject = 'FKDB_域名证书到期通知'
     content = '''
         <font face="Arial" size="2" color="black">
         
@@ -70,7 +70,7 @@ else:
             Best Regards,<br>
             <br>
             B2  <br>
-            SA/运维部/<br>
+            SA/部門/<br>
         </font>
         <font face="微软雅黑" size="2" color="gray">
         *******************************************************************************************************************************************<br>
@@ -78,5 +78,5 @@ else:
         Notice: This transmittal or attachments may be confidential. If you are not the intended receipt, you are hereby notified that you have received this transmittal  in error; any review, dissemination or copy is strictly prohibited. If you have received this transmittal in error, please notify us immediately by reply and immediately delete this message and all its attachments. Thank you.<br>
         *******************************************************************************************************************************************<br>
         </front>'''.format(certwarn)
-    mail.Send('{0}'.format(receive), 'better@iv66.net', '','b4@iv66.net',subject ,content ,file)
+    mail.Send('{0}'.format(receive), 'better@', '','b4@',subject ,content ,file)
 

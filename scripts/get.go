@@ -7,6 +7,7 @@ import (
 
 )
 
+
 func main() {
     client := &http.Client{}
     req, err := http.NewRequest("GET", "https://api2.greypanel.com/api/v1/account/view", nil)
@@ -21,10 +22,12 @@ func main() {
     defer resp.Body.Close()
 
     body, err := ioutil.ReadAll(resp.Body)
+
     if err != nil {
         // handle error
     }
-
+    test := req.PostForm["domainBalance"]
+    
     fmt.Println(string(body))
-
 }
+
