@@ -1,0 +1,12 @@
+Name DomainCount Percent
+A01
+A02
+A03
+A04
+A05
+A06
+B01
+C01
+C02
+C07
+Public
