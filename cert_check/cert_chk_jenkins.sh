@@ -3,10 +3,12 @@
 #Author: Xavi
 
 #===Initial====
-> /root/jenkins/walker/shell/cert_check/cert_warn.txt
+work_path="/root/groceries/cert_check"
 
-sed -i "s/ /\n/g" /root/jenkins/walker/shell/cert_check/spcl_domains.txt
-domains="cat /root/jenkins/walker/shell/cert_check/spcl_domains.txt"
+> $work_path/cert_warn.txt
+
+sed -i "s/ /\n/g" $work_path/spcl_domains.txt
+domains=`cat $work_path/spcl_domains.txt`
 
 #====SSL Check====
 
@@ -21,9 +23,9 @@ for domain in `$domains`
       let left_time=$end_times-$current_times
       days=`expr $left_time / 86400`
 
-      [ $days -lt 30 ] && echo -e "===== $domain =====\n\n 剩余天数: $days 天; [WARN]: 证书有效期少于30天，存在风险！\n" >> /root/jenkins/walker/shell/cert_check/cert_warn.txt || echo -e "\n==== $domain ====\n\n 剩余天数: $days 天" 
+      [ $days -lt 30 ] && echo -e "===== $domain =====\n\n 剩余天数: $days 天; [WARN]: 证书有效期少于30天，存在风险！\n" >> $work_path/cert_warn.txt || echo -e "\n==== $domain ====\n\n 剩余天数: $days 天" 
       echo ""
 done
 
 #====send mail====
-/root/jenkins/walker/shell/cert_check/mail.py
+#$work_path/mail.py

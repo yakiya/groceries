@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 #docker version check
 #auth: neo_hsu
-#version: 2.0
+#version: 2.5
 
 read -p "select version you wanna install for example, 18.03.0.ce: " version
 if [[ ${version:1:1} =~ ":" ]] ; then
