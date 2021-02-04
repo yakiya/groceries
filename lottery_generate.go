@@ -28,7 +28,7 @@ func lotterRandomGenerate(start int, end int, count int) []int {
     nums := make([]int, 0)
     
     //random nums generate, make sure no nums repeat
-    r := rand.New(rand.NewSource(time.now().UnixNano())
+    r := rand.New(rand.NewSource(time.now().UnixNano()))
     for len(nums) < count {
         num := r.Intn((end-start)) + start
         
