@@ -3,7 +3,7 @@
 
 while true
 do
-    go run lottery.go > num.list
+    go run lottery_generate.go > num.list
     grep -E "8|18" num.list > list.txt
     grep -E "10|1" list.txt > katsu.txt
     
